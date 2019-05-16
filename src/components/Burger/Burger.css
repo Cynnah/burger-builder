@@ -1,0 +1,35 @@
+.Burger {
+    width: 100%;
+    margin: auto;
+    height: 250px;
+    overflow: scroll;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* *** MEDIA QUERY pour des devices moins larges *** */
+@media (min-width: 500px) and (min-height: 400px) {
+    .Burger {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+/* *** MEDIA QUERY pour verifier si la largeur min est plus petite 
+       et si la hauteur min est 401px si c'est le cas j'aurais 450
+       en largeur et 400px en hauteur *** */
+@media (min-width: 500px) and (min-height: 401px) {
+    .Burger {
+        width: 450px;
+        height: 400px;
+    }
+}
+
+/* *** MEDIA QUERY pour verifier la hauteur min et la largeur min *** */
+@media (min-width: 1000px) and (min-height: 700px) {
+    .Burger {
+        width: 700px;
+        height: 600px;
+    }
+}
