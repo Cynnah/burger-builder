@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Auxilliary from '../../components/Layout/Auxilliary';
 import Burger from '../../components/Burger/Burger';
+import BuildControls from '../../components/Burger/Build Controls/BuildControls';
 
 class BurgerBuilder extends Component {
     // constructor(props) {
@@ -21,7 +22,7 @@ class BurgerBuilder extends Component {
         return (
             <Auxilliary>
                 <Burger ingredients={this.state.ingredients}/>
-                <div>Build controls</div>
+                <BuildControls />
             </Auxilliary>
         );
     }
