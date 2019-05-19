@@ -80,6 +80,10 @@ class BurgerBuilder extends Component {
         });
     }
 
+    purchaseCancelHandler = () => {
+        this.setState({purchasing: false});
+    }
+
     render () {
         const disabledInfo = { // Ici copie de l'objet du state de façon immuable
             ...this.state.ingredients
@@ -89,7 +93,7 @@ class BurgerBuilder extends Component {
         }
         return (
             <Auxilliary>
-                <Modal show={this.state.purchasing}>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     <OrderSummary ingredients={this.state.ingredients}/>
                 </Modal>
                 <Burger ingredients={this.state.ingredients}/>
