@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Auxilliary from '../../Layout/Auxilliary';
+import Button from '../../UI/Button/Button'
 
 const orderSummary = (props) => {
     const ingredientSummary = Object.keys(props.ingredients)
@@ -18,7 +19,10 @@ const orderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
+            <p><strong>Prix Total : {props.price.toFixed(2)}</strong></p>
             <p>Continuer la commande?</p>
+            <Button btnType="Danger" clicked={props.purchaseCancelled}>ANNULER</Button>
+            <Button btnType="Success" clicked={props.purchaseContinued}>CONTINUER</Button>
         </Auxilliary>
     );
 };
